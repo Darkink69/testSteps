@@ -53,7 +53,9 @@ const MotionSensorComponent = () => {
     // Простейший алгоритм подсчета шагов
     if (event.accelerationIncludingGravity) {
       const { x, y, z } = event.accelerationIncludingGravity;
-      const totalAcceleration = Math.sqrt(x! * x! + y! * y! + z! * z!);
+      const totalAcceleration = Math.sqrt(
+        (x ?? 0) ** 2 + (y ?? 0) ** 2 + (z ?? 0) ** 2
+      );
 
       // Логика определения шага (упрощенная)
       if (totalAcceleration > 15) {
