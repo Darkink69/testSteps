@@ -3,35 +3,38 @@
 const Header = () => {
   return (
     <header className="flex justify-between">
+      <div className="relative pr-4">
       <div className="rounded-full w-[50px] h-[50px] flex items-center justify-center overflow-hidden">
         <img
           src="src/assets/ava.png"
           alt="Avatar"
           className="w-full h-full object-cover"
-        />
+        /> 
       </div>
-      <div className="top-14 left-8">
+      <div className="absolute top-9 left-4">
         <span className="text-[#00FF99] bg-[#2B2A2A] text-xs font-maven-pro pt-0.5 pb-0.5 pr-2 pl-2 rounded-2xl">
           245km
         </span>
       </div>
+      </div>
+
       <div className="flex items-center">
-        <div className="flex flex-col">
-          <div className="flex items-center space-x-2">
+        <div className="flex flex-row">
+          <div className="flex items-center space-x-1">
             <img src="src/assets/image.png" alt="" className="w-5 h-5" />
-            <span className="text-white text-xs font-maven-pro font-medium">
+            <span className="text-white text-xs font-maven-pro font-medium pr-2">
               2355.65
             </span>
           </div>
-          <div className="flex items-center space-x-2 mt-1">
+          <div className="flex items-center space-x-1">
             <img src="src/assets/coin.png" alt="Coins" className="w-5 h-5" />
-            <span className="text-white text-xs font-maven-pro font-medium">
+            <span className="text-white text-xs font-maven-pro font-medium pr-2">
               578.15
             </span>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-1">
             <img src="src/assets/map.png" alt="Energy" className="w-5 h-5" />
-            <span className="text-white text-xs font-maven-pro font-medium">
+            <span className="text-white text-xs font-maven-pro font-medium pr-2">
               23.45
             </span>
           </div>
