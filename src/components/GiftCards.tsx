@@ -4,7 +4,7 @@ import GiftCard from "./GiftCard";
 const GiftCards = () => {
   const data = [
     {
-      img: "src/assets/gift1.png",
+      img: "https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/gift1.png",
       status: (
         <svg
           width="42"
@@ -25,9 +25,13 @@ const GiftCards = () => {
       ),
       time: "14:20:34",
     },
-    { img: "src/assets/gift2.png", status: "", time: "" },
     {
-      img: "src/assets/gift3.png",
+      img: "https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/gift2.png",
+      status: "",
+      time: "",
+    },
+    {
+      img: "https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/gift3.png",
       status: (
         <svg
           width="13"
@@ -45,11 +49,15 @@ const GiftCards = () => {
       time: "14:20:34",
     },
     {
-      img: "src/assets/gift4.png",
+      img: "https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/gift4.png",
       status: "",
       time: "",
     },
-    { img: "src/assets/gift5.png", status: "", time: "" },
+    {
+      img: "https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/gift5.png",
+      status: "",
+      time: "",
+    },
   ];
 
   const cards = Array.from({ length: data.length }, (_, index) => (

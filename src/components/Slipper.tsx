@@ -5,10 +5,16 @@ const Slipper = () => {
     <>
       <div className="relative pt-6">
         <div className="">
-          <img src="src/assets/bg.png" alt="bg" />
+          <img
+            src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/bg.png"
+            alt="bg"
+          />
         </div>
         <div className="absolute top-4 left-5">
-          <img src="src/assets/slipper.png" alt="slipper" />
+          <img
+            src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/slipper.png"
+            alt="slipper"
+          />
         </div>
       </div>
     </>

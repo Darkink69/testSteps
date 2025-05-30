@@ -6,7 +6,7 @@ const Header = () => {
       <div className="relative pr-4">
         <div className="rounded-full w-[50px] h-[50px] flex items-center justify-center overflow-hidden">
           <img
-            src="src/assets/ava.png"
+            src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/ava.png"
             alt="Avatar"
             className="w-full h-full object-cover"
           />
@@ -21,19 +21,31 @@ const Header = () => {
       <div className="flex items-center">
         <div className="flex flex-row">
           <div className="flex items-center space-x-1">
-            <img src="src/assets/image.png" alt="" className="w-5 h-5" />
+            <img
+              src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/image.png"
+              alt=""
+              className="w-5 h-5"
+            />
             <span className="text-white text-xs font-maven-pro font-medium pr-2">
               2355.65
             </span>
           </div>
           <div className="flex items-center space-x-1">
-            <img src="src/assets/coin.png" alt="Coins" className="w-5 h-5" />
+            <img
+              src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/coin.png"
+              alt="Coins"
+              className="w-5 h-5"
+            />
             <span className="text-white text-xs font-maven-pro font-medium pr-2">
               578.15
             </span>
           </div>
           <div className="flex items-center space-x-1">
-            <img src="src/assets/map.png" alt="Energy" className="w-5 h-5" />
+            <img
+              src="https://9qhr1l4qpuouftdm.public.blob.vercel-storage.com/assets/map.png"
+              alt="Energy"
+              className="w-5 h-5"
+            />
             <span className="text-white text-xs font-maven-pro font-medium pr-2">
               23.45
             </span>
