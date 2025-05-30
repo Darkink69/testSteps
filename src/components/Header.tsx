@@ -4,18 +4,18 @@ const Header = () => {
   return (
     <header className="flex justify-between">
       <div className="relative pr-4">
-      <div className="rounded-full w-[50px] h-[50px] flex items-center justify-center overflow-hidden">
-        <img
-          src="src/assets/ava.png"
-          alt="Avatar"
-          className="w-full h-full object-cover"
-        /> 
-      </div>
-      <div className="absolute top-9 left-4">
-        <span className="text-[#00FF99] bg-[#2B2A2A] text-xs font-maven-pro pt-0.5 pb-0.5 pr-2 pl-2 rounded-2xl">
-          245km
-        </span>
-      </div>
+        <div className="rounded-full w-[50px] h-[50px] flex items-center justify-center overflow-hidden">
+          <img
+            src="src/assets/ava.png"
+            alt="Avatar"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute top-9 left-4">
+          <span className="text-[#00FF99] bg-[#2B2A2A] text-xs font-maven-pro pt-0.5 pb-0.5 pr-2 pl-2 rounded-2xl">
+            245km
+          </span>
+        </div>
       </div>
 
       <div className="flex items-center">
