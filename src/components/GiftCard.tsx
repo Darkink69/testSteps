@@ -21,7 +21,7 @@ const GiftCard = ({ data }: any) => {
             {data.time}
           </span>
           {/* Button */}
-          <button className="absolute bottom-1 w-[94px] h-[30px] bg-transparent border-1 border-[#00FF99] hover:bg-[#00FF99] hover:text-white transition-colors duration-300 ease-in-out rounded-xl text-[#00FF99]">
+          <button className="absolute bottom-1 w-[94px] h-[30px] bg-transparent border-1 border-[#00FF99] from-[#74F3EC] to-[#00FF99] hover:bg-gradient-to-b hover:text-black transition-colors duration-300 ease-in-out rounded-xl text-[#00FF99]">
             Open
           </button>
         </div>

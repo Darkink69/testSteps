@@ -1,5 +1,7 @@
 // import { useState, useEffect } from "react";
 import "../src/App.css";
+
+import BtnStart from "./components/BtnStart";
 import Footer from "./components/Footer";
 import GiftCards from "./components/GiftCards";
 import Header from "./components/Header";
@@ -13,6 +15,7 @@ function App() {
           <div className="p-4">
             <Header />
             <Slipper />
+            <BtnStart/>
             <GiftCards />
             <div className="absolute w-10/12 -bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
               <Footer />

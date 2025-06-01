@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StepN Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; }
+        #stepCounter { font-size: 48px; margin: 20px 0; }
+        button { padding: 15px 30px; font-size: 18px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Шагомер StepN</h1>
+    <div id="stepCounter">0 шагов</div>
+    <button id="startBtn">Начать отслеживание</button>
+    <button id="stopBtn" disabled>Остановить</button>
+    <button id="submitBtn" disabled>Отправить шаги</button>
+
+    <script>
+        const stepCounter = document.getElementById('stepCounter');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        let stepCount = 0;
+        let lastAcceleration = 0;
+        let isCounting = false;
+        let sensitivity = 12; // Настройка чувствительности
+
+        // Инициализация Telegram Web App
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть приложение на весь экран
+
+        startBtn.addEventListener('click', () => {
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', handleMotion);
+                startBtn.disabled = true;
+                stopBtn.disabled = false;
+                submitBtn.disabled = true;
+                isCounting = true;
+                stepCount = 0;
+                updateCounter();
+            } else {
+                alert("Ваше устройство не поддерживает отсчет шагов");
+            }
+        });
+
+        stopBtn.addEventListener('click', () => {
+            window.removeEventListener('devicemotion', handleMotion);
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            submitBtn.disabled = false;
+            isCounting = false;
+        });
+
+        submitBtn.addEventListener('click', () => {
+            // Отправка данных в Telegram бот
+            tg.sendData(JSON.stringify({
+                type: "steps",
+                count: stepCount,
+                userId: tg.initDataUnsafe.user.id
+            }));
+        });
+
+        function handleMotion(event) {
+            const acceleration = Math.sqrt(
+                event.acceleration.x ** 2 +
+                event.acceleration.y ** 2 +
+                event.acceleration.z ** 2
+            );
+
+            // Детектирование шага (пик ускорения)
+            if (acceleration > sensitivity && lastAcceleration <= sensitivity) {
+                stepCount++;
+                updateCounter();
+            }
+            lastAcceleration = acceleration;
+        }
+
+        function updateCounter() {
+            stepCounter.textContent = stepCount + " шагов";
+        }
+
+        // Обработчик ответа от бота
+        tg.onEvent('messageSent', (data) => {
+            if (data.status === 'success') {
+                alert("Шаги успешно отправлены!");
+                stepCount = 0;
+                updateCounter();
+            }
+        });
+    </script>
+</body>
+</html>
