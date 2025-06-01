@@ -65,7 +65,7 @@ const GiftCards = () => {
   ));
   return (
     <>
-      <div className="relative">
+      <div className="relative pt-2">
         <div className="grid grid-cols-3 md:grid-cols-3 gap-2 auto-rows-fr">
           {cards}
         </div>

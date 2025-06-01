@@ -5,6 +5,7 @@ import BtnStart from "./components/BtnStart";
 import Footer from "./components/Footer";
 import GiftCards from "./components/GiftCards";
 import Header from "./components/Header";
+import ProgressBar from "./components/ProgressBar";
 import Slipper from "./components/Slipper";
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
           <div className="p-4">
             <Header />
             <Slipper />
-            <BtnStart/>
+            
             <GiftCards />
-            <div className="absolute w-10/12 -bottom-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <ProgressBar/>
+            <div className="absolute w-10/12 -bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <BtnStart/>
               <Footer />
             </div>
           </div>
